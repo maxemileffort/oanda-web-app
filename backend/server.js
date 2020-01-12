@@ -13,7 +13,13 @@ const { User, TickData } = require('./models');
 
 
 app.use(express.static('public'));
-
+//====================
+//GET endpoints
+//====================
+//serves landing page
+app.get("/", (req, res) => {
+    res.status(200).sendFile(__dirname + "/public/index.html");
+});
 
 //====================
 //Catchall endpoint
